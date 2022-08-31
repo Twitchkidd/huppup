@@ -9,6 +9,15 @@ const Title = styled.h1`
 	font-size: 4rem;
 	text-align: center;
 	color: var(--purple);
+	font-family: var(--serif);
+`;
+
+const P = styled.p`
+	font-family: var(--sans);
+`;
+
+const Display = styled.h2`
+	font-family: var(--display);
 `;
 
 export default function Home() {
@@ -24,6 +33,8 @@ export default function Home() {
 			</Head>
 
 			<Title>Welcome to HupPup!</Title>
+			<P>What font are we going to be in?</P>
+			<Display>Oh wow!</Display>
 			<Image src='/huppup.svg' alt='HupPup Logo' width={120} height={120} />
 		</AppWrap>
 	);

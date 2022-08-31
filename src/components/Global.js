@@ -53,6 +53,36 @@ const Global = createGlobalStyle`
     --gray-800: #28282F;
     --gray-900: #14141D;
     --gray: var(--gray-500);
+
+    --serif: 'Nanum Pen', serif;
+    --sans: 'Arvo', sans-serif;
+    --display: 'Assisstant', serif;
+
+    --fs-x-large: 5rem;
+    --fs-large: 2rem;
+    --fs-medium: 1.25rem;
+    --fs-small: 1rem;
+  }
+
+  @font-face {
+    font-family: 'Nanum Pen';
+    src: url('/fonts/NanumPenScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Arvo';
+    src: url('/fonts/Arvo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Assisstant';
+    src: url('/fonts/Assistant-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
   }
 `;
 
