@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import { above } from 'utils/breakpoints.js';
 
 const Global = createGlobalStyle`
   ${normalize};
@@ -62,6 +63,13 @@ const Global = createGlobalStyle`
     --fs-large: 2rem;
     --fs-medium: 1.25rem;
     --fs-small: 1rem;
+
+    ${above.med`
+      --fs-x-large: 7rem;
+      --fs-large: 3rem;
+      --fs-medium: 1.5rem;
+      --fs-small: 1.25rem;
+    `}
   }
 
   @font-face {
