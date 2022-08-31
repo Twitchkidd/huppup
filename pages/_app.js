@@ -1,4 +1,4 @@
-import Global from '../components/Global';
+import Global from 'components/Global';
 
 function MyApp({ Component, pageProps }) {
 	return (
