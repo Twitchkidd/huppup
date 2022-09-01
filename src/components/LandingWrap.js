@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const AppWrap = styled.div`
-	display: grid;
-	place-items: center;
-
-	min-height: 100vh;
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
 `;
 
 export default AppWrap;

@@ -3,13 +3,6 @@ import { normalize } from 'styled-normalize';
 import { above } from 'utils/breakpoints.js';
 
 const Global = createGlobalStyle`
-  ${normalize};
-  html {
-    box-sizing: border-box;
-  }
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
   :root {
     --purple-100: #E1E5FB;
     --purple-300: #B2BBEE;
@@ -91,6 +84,15 @@ const Global = createGlobalStyle`
     src: url('/fonts/Assistant-VariableFont_wght.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+  }
+
+  ${normalize};
+  
+  html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
   }
 `;
 
