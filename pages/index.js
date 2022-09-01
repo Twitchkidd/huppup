@@ -18,6 +18,7 @@ export default function Home() {
 				<h1>HupPup!</h1>
 				<h2>Dog Running</h2>
 				<h3>Also Some Words!</h3>
+				<FullWidth src={doggie} alt='Running dog, very cute' />
 				<h4>Someone Call For Words?</h4>
 				<h5>WORDS! We Got Em!</h5>
 				<h6>WORDS ALL DAY ALRIIIGHT YEA!!!</h6>
@@ -42,7 +43,6 @@ export default function Home() {
 					<li>Lorem, ipsum dolor</li>
 					<li>Lorem, ipsum dolor</li>
 				</ul>
-				<FullWidth src={doggie} alt='Running dog, very cute' />
 				<footer style={{ paddingBlock: '16px' }}>
 					<span>And that's a wrap!</span>
 				</footer>
