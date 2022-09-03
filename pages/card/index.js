@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import DeviceOrientation from 'react-device-orientation';
 
 const Button = styled.button`
-	height: 300px;
-	width: 200px;
+	height: 100px;
+	width: 300px;
 `;
 
 const Box = styled.div`
@@ -12,8 +12,8 @@ const Box = styled.div`
 	width: 40px;
 	background: var(--pink);
 	position: absolute;
-	left: ${props => `${props.left * 5 + 100}px`};
-	bottom: 0;
+	left: calc(50% - 20px + ${props => props.left * 5}px);
+	bottom: calc(50% - 20px);
 `;
 
 // use `ngrok http 3000` to get https localhost!
@@ -41,8 +41,13 @@ export default function Card() {
 	}, []);
 	return (
 		<div style={{ display: 'flex' }}>
-			<div style={{ position: 'relative' }}>
+			<div style={{ display: 'grid', placeItems: 'center', height: '100vh' }}>
 				<h1>Heya!</h1>
+				<Button onClick={handleClick} disabled={!inBrowser}>
+					Give website motion and orientation data?
+				</Button>
+			</div>
+			<div style={{ position: 'relative', width: '100%' }}>
 				{hasOrientationPermission ? (
 					<DeviceOrientation>
 						{({ absolute, alpha, beta, gamma }) => (
@@ -62,21 +67,6 @@ export default function Card() {
 					</DeviceOrientation>
 				) : null}
 			</div>
-			<Button onClick={handleClick} disabled={!inBrowser}>
-				Give website motion and orientation data?
-			</Button>
-			{/* {hasOrientationPermission ? (
-				<DeviceOrientation>
-					{({ absolute, alpha, beta, gamma }) => (
-						<div style={{ fontSize: 'var(--fs-200)' }}>
-							<p>Absolute: {absolute}</p>
-							<p>Alpha: {alpha}</p>
-							<p>Beta: {beta}</p>
-							<p>Gamma: {gamma}</p>
-						</div>
-					)}
-				</DeviceOrientation>
-			) : null} */}
 		</div>
 	);
 }
