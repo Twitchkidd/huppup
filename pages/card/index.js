@@ -8,12 +8,15 @@ const Button = styled.button`
 `;
 
 const Box = styled.div`
-	height: 40px;
-	width: 40px;
+	height: 200px;
+	width: 400px;
 	background: var(--pink);
 	position: absolute;
-	left: calc(50% - 20px + ${props => props.left * 5}px);
-	bottom: calc(50% - 20px);
+	/* left: calc(50% - 20px + ${props => props.left * 5}px); */
+	left: calc(50% - 200px);
+	bottom: 0;
+	/* This is dumb. The easiest thing is to conditionally render the button and then only have the card on the screen. One div. Homework. */
+	transform: rotateZ(${props => props.left}deg);
 `;
 
 // use `ngrok http 3000` to get https localhost!
@@ -51,7 +54,8 @@ export default function Card() {
 				{hasOrientationPermission ? (
 					<DeviceOrientation>
 						{({ absolute, alpha, beta, gamma }) => (
-							<div>
+							<div
+								style={{ perspective: '400px', background: 'var(--gray-300)' }}>
 								<Box left={beta} />
 								<p
 									style={{
