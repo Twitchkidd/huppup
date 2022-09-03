@@ -16,6 +16,8 @@ const Box = styled.div`
 	bottom: 0;
 `;
 
+// use `ngrok http 3000` to get https localhost!
+
 export default function Card() {
 	const [inBrowser, setInBrowser] = useState(false);
 	const [hasOrientationPermission, setHasOrientationPermission] =
